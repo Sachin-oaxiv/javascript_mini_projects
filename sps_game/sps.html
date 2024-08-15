@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stone paper sissor</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <h1>stone paper sissor</h1>
+    <button
+    onclick="playgame('stone')" class ="stone" >stone</button>
+    <button
+    onclick="playgame('paper')" class ="paper">paper</button>
+    <button
+    onclick="playgame('sissor')" class ="sissor">sissor</button>
+    <h1 id ="res" class="result"> </h1>
+    <script>
+
+      let res = document.getElementById("res")
+    
+       function playgame(playermove)
+       {
+        let result ='';
+  if (playermove === 'stone')
+    {
+          let computermove = computer();
+            if (computermove === 'stone')
+            {
+                result = 'tie'
+            }
+            else if (computermove === 'paper')
+            {
+                result = 'lose'
+            }
+            else if (computermove === 'sissor')
+            {
+                result = 'win'
+            }
+            alert(`you picked ${playermove}. computer picked  ${computermove} and you ${result}`)
+            res.textContent = result 
+    }
+  else if(playermove === 'paper')
+      {
+        let computermove = computer();
+            if (computermove === 'paper')
+            {
+                result = 'tie'
+            }
+            else if (computermove === 'sissor')
+            {
+                result = 'lose'
+            }
+            else if (computermove === 'stone')
+            {
+                result = 'win'
+            }
+            alert(`you picked ${playermove}. computer picked  ${computermove} and you ${result}`)
+            res.textContent = result 
+
+      }
+  else if(playermove === 'sissor')
+  {
+          let computermove = computer();
+
+        if (computermove === 'sissor')
+        {
+            result = 'tie'
+        }
+        else if (computermove === 'stone')
+        {
+            result = 'lose'
+        }
+        else if (computermove === 'paper')
+        {
+            result = 'win'
+        }
+        alert(`you picked ${playermove}. computer picked  ${computermove} and you ${result}`)
+        res.textContent = result 
+    
+    }
+  }
+    
+    </script>
+
+    <script>
+  function computer()
+        {
+      let computermove ='';
+      let random = Math.random();
+
+      if (random >=0 && random <= 1/2)
+      {
+        computermove ='stone'
+      }
+      else if (random >1/2 && random <= 2/3)
+      {
+        computermove = 'paper'
+      }
+      else if (random >2/3 && random <= 1 )
+      {
+        computermove ='sissor'
+      }
+      return computermove;
+        }
+        
+
+    </script>
+    
+</body>
+</html>

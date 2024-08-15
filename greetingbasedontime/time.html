@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <input type="text" id = "getin" placeholder = "Enter your name" ></input><br>
+    <button onclick= "hi()" id="submit-button" > submit</button><br>
+    <h1 id = "result">Hey Hi!</h1>
+
+    <script>
+        let greet = document.getElementById("getin")
+        let res = document.getElementById("result")
+   
+function hi()
+{
+
+   
+    let currentHour = new Date().getHours();
+    console.log( currentHour)
+    let greeet = greet.value
+    let message ; 
+    
+    if ( currentHour >= 24 && currentHour <= 12)
+    {
+        message = "Good morning"
+    }
+
+    else if ( currentHour >= 12 &&  currentHour <= 18)
+    {
+        message = "good afternoon"
+    }
+    else if ( currentHour >= 18 &&  currentHour <= 21  )
+    {
+        message = "Good evening"
+    }
+    else if ( currentHour >= 21 && currentHour <= 24)
+    {
+        message = "Good night"
+    }
+    console.log(message)
+    let greeting = `${message +' ' + greeet} `;
+    if(greeet === '')
+    {
+       greeting = "Enter your name"
+      res.textContent = greeting
+    }
+    console.log(greeting)
+    res.textContent = greeting
+
+    
+}
+
+    </script> 
+</body>
+</html>

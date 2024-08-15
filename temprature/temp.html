@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temprature</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <input type="number" id = "temp">
+    <button onclick="converttemp('celsius')" class = "farenheit">Farenheit</button>
+    <button onclick="converttemp('farenheit')" class = "celsius">Celsius</button>
+    <h1 id = "result"></h1>
+</body>
+<script>
+    let result = document.getElementById("result")
+    let temprature = document.getElementById("temp")
+    function converttemp(heat)
+    {
+        let tempp = Number(temprature.value)
+        if (heat === 'celsius')
+    {
+        let farenheit = convetToFarenheit(tempp);
+        result.textContent = farenheit;
+        console.log(farenheit)
+    }
+    else if (heat === 'farenheit')
+    {
+        let celsius = convetToFarenheit(tempp);
+        result.textContent = celsius;
+        console.log(celsius)
+    }
+    }
+</script>
+<script>
+    function convetToFarenheit(celsius)
+    {
+        let farenheit ='';
+         farenheit = (celsius * 9/5)+32
+         console.log(farenheit)
+
+         return farenheit;
+    }
+   
+    function convetTocelsius(farenheit)
+    {
+        let celsius = '';
+        celsius = (farenheit-32)*5/9
+        console.log(celsius) 
+
+        return celsius;
+    } 
+    </script>
+</html>

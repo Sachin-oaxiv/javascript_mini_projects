@@ -1,0 +1,65 @@
+body
+{
+    height: 100vh;
+    background-image: linear-gradient(45deg,rgb(105, 241, 157),rgb(154, 122, 205),rgb(104, 181, 240));
+    justify-content: center;
+    text-align: center;
+
+}
+.stone
+{
+    background-size: 100px;   
+    background-position: center;
+    background-image:url(stone.png);
+    height: 100px;
+    width: 100px;
+    border: none;
+    border-radius: 50%;
+    justify-items: center;
+    margin-top: 200px;
+    margin-right: 50px;
+    color: transparent;
+}
+.paper
+{
+    background-image: url(paper2.png);
+    background-position: center;
+    background-size: 101px;
+    color: transparent;
+    border: none;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    justify-items: center;
+    margin-top: 200px;
+    margin-left: 10px;
+}
+.sissor
+{
+    background-size: 101px;
+    background-position: center;
+    border: none;
+    border-radius: 50%;
+    background-image:url(scissors.png) ;
+    height: 100px;
+    width: 100px;
+    justify-items: center;
+    margin-top: 200px;
+    margin-left: 58px;
+    height: 100px;
+    width: 100px;
+    color: transparent;
+    
+}
+.result
+{
+    background-image: linear-gradient(45deg,rgb(208, 87, 50),rgb(240, 60, 28));
+    width: 100%;
+    font-size: 56px;
+    font-weight: 900; 
+    background-clip: text;
+    color: transparent;
+    border: none;
+   
+    
+}
